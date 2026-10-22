@@ -1,0 +1,150 @@
+{
+    "generated_at": "2026-10-22T22:48:54+03:00",
+    "source": {
+        "orders": "D:\\mer-trade-assessment/01-orders-1c-sync/data/orders.json",
+        "nomenclature": "D:\\mer-trade-assessment/01-orders-1c-sync/data/nomenclature_1c.csv",
+        "orders_count": 31
+    },
+    "findings": {
+        "MP-24003|TS-1004|PRICE_MISMATCH": {
+            "order": "MP-24003",
+            "sku": "TS-1004",
+            "code": "PRICE_MISMATCH",
+            "severity": "warning",
+            "message": "Цена в заказе 1 150,00, в 1С 1 250,00",
+            "action": "Согласовать цену с площадкой; передавать по цене 1С или исправить заказ.",
+            "comment": "разница −100,00 (−8,0%)",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24005|TS-1099|SKU_NOT_FOUND": {
+            "order": "MP-24005",
+            "sku": "TS-1099",
+            "code": "SKU_NOT_FOUND",
+            "severity": "error",
+            "message": "Артикула TS-1099 нет в выгрузке 1С",
+            "action": "Проверить артикул; завести номенклатуру в 1С или отклонить позицию.",
+            "comment": "",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24008|TS-1012|INSUFFICIENT_STOCK": {
+            "order": "MP-24008",
+            "sku": "TS-1012",
+            "code": "INSUFFICIENT_STOCK",
+            "severity": "warning",
+            "message": "Не хватает 2 шт.: нужно 7, свободно 5",
+            "action": "Частичная отгрузка, замена или уведомление клиента о переносе.",
+            "comment": "остаток по 1С 5,00",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24011|TS-1022|PRICE_MISMATCH": {
+            "order": "MP-24011",
+            "sku": "TS-1022",
+            "code": "PRICE_MISMATCH",
+            "severity": "warning",
+            "message": "Цена в заказе 9,90, в 1С 10,90",
+            "action": "Согласовать цену с площадкой; передавать по цене 1С или исправить заказ.",
+            "comment": "разница −1,00 (−9,2%)",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24014|TS-1017|AMBIGUOUS_NOMENCLATURE": {
+            "order": "MP-24014",
+            "sku": "TS-1017",
+            "code": "AMBIGUOUS_NOMENCLATURE",
+            "severity": "warning",
+            "message": "В 1С 2 карточки с артикулом TS-1017",
+            "action": "Выбрать актуальную карточку и почистить дубли в справочнике 1С.",
+            "comment": "выбрана карточка 00-00100112, Точилка с контейнером",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24016|TS-1033|INSUFFICIENT_STOCK": {
+            "order": "MP-24016",
+            "sku": "TS-1033",
+            "code": "INSUFFICIENT_STOCK",
+            "severity": "warning",
+            "message": "Не хватает 1 шт.: нужно 1, свободно 0",
+            "action": "Частичная отгрузка, замена или уведомление клиента о переносе.",
+            "comment": "остаток по 1С 0,00",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24017|TS-1006|DUPLICATE_LINE": {
+            "order": "MP-24017",
+            "sku": "TS-1006",
+            "code": "DUPLICATE_LINE",
+            "severity": "warning",
+            "message": "Артикул TS-1006 повторяется в заказе",
+            "action": "Объединить количества и проверить, нет ли задвоения позиции.",
+            "comment": "строки 1, 3; количества объединены",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24017|TS-1006|INSUFFICIENT_STOCK": {
+            "order": "MP-24017",
+            "sku": "TS-1006",
+            "code": "INSUFFICIENT_STOCK",
+            "severity": "warning",
+            "message": "Не хватает 1 шт.: нужно 3, свободно 2",
+            "action": "Частичная отгрузка, замена или уведомление клиента о переносе.",
+            "comment": "остаток по 1С 2,00",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24019|TS-2001|SKU_NOT_FOUND": {
+            "order": "MP-24019",
+            "sku": "TS-2001",
+            "code": "SKU_NOT_FOUND",
+            "severity": "error",
+            "message": "Артикула TS-2001 нет в выгрузке 1С",
+            "action": "Проверить артикул; завести номенклатуру в 1С или отклонить позицию.",
+            "comment": "",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24021|TS-1025|INSUFFICIENT_STOCK": {
+            "order": "MP-24021",
+            "sku": "TS-1025",
+            "code": "INSUFFICIENT_STOCK",
+            "severity": "warning",
+            "message": "Не хватает 1 шт.: нужно 2, свободно 1",
+            "action": "Частичная отгрузка, замена или уведомление клиента о переносе.",
+            "comment": "остаток по 1С 4,00",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24024|TS-1030|PRICE_MISMATCH": {
+            "order": "MP-24024",
+            "sku": "TS-1030",
+            "code": "PRICE_MISMATCH",
+            "severity": "warning",
+            "message": "Цена в заказе 340,00, в 1С 315,00",
+            "action": "Согласовать цену с площадкой; передавать по цене 1С или исправить заказ.",
+            "comment": "разница +25,00 (+7,9%)",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24025||TOTAL_MISMATCH": {
+            "order": "MP-24025",
+            "sku": null,
+            "code": "TOTAL_MISMATCH",
+            "severity": "warning",
+            "message": "Сумма заказа 103,20 не равна сумме строк 98,20",
+            "action": "Пересчитать заказ и уточнить сумму у площадки.",
+            "comment": "разница 5,00",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24028||EMPTY_ORDER": {
+            "order": "MP-24028",
+            "sku": null,
+            "code": "EMPTY_ORDER",
+            "severity": "error",
+            "message": "В заказе нет ни одной позиции",
+            "action": "Связаться с площадкой и уточнить состав заказа.",
+            "comment": "",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        },
+        "MP-24030|TS-1003|MISSING_PRICE": {
+            "order": "MP-24030",
+            "sku": "TS-1003",
+            "code": "MISSING_PRICE",
+            "severity": "error",
+            "message": "В строке не указана цена",
+            "action": "Запросить цену у площадки; заказ не передавать, пока цена не подтверждена.",
+            "comment": "",
+            "first_seen": "2026-10-22T22:48:54+03:00"
+        }
+    }
+}
