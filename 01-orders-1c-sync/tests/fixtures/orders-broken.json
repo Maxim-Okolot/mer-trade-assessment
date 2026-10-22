@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "data": {
+    "orders": [
+      {
+        "id": "T-1",
+        "created_at": "2026-10-01T10:00:00+03:00",
+        "status": "new",
+        "items": [
+          { "sku": "TS-1001", "title": "Блокнот А5 клетка", "quantity": 2, "price": 3.2 }
+        ],
+        "total": 6.4,
+        "currency": "BYN"
+      },
+      {
+        "id": "",
+        "created_at": "2026-10-01T11:00:00+03:00",
+        "status": "new",
+        "items": []
+      },
+      {
+        "id": "T-3",
+        "created_at": "not-a-date",
+        "status": "new",
+        "items": []
+      },
+      {
+        "id": "T-4",
+        "created_at": "2026-10-01T12:00:00+03:00",
+        "status": "new",
+        "items": [
+          { "sku": "TS-1002", "quantity": "два", "price": 1.1 }
+        ]
+      },
+      {
+        "id": "T-5",
+        "created_at": "2026-10-01T13:00:00+03:00",
+        "status": "new",
+        "items": [
+          { "sku": "TS-1001", "title": "Блокнот А5 клетка", "quantity": 1, "price": 3.2 }
+        ],
+        "total": 3.2,
+        "currency": "USD"
+      }
+    ]
+  }
+}
