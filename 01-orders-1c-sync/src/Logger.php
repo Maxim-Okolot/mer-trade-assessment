@@ -20,6 +20,11 @@ final class Logger
         if (!is_dir($dir) && !mkdir($dir, 0777, true) && !is_dir($dir)) {
             throw new \RuntimeException("Не удалось создать каталог для лога: {$dir}");
         }
+
+        // Каждый запуск — отдельный лог, иначе повторная проверка смешает прогоны.
+        if (file_put_contents($this->file, '') === false) {
+            throw new \RuntimeException("Не удалось открыть лог: {$file}");
+        }
     }
 
     public function info(string $message, array $context = []): void

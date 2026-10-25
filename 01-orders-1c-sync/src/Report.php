@@ -154,8 +154,30 @@ final class Report
         if ($okOrders !== []) {
             $lines[] = 'ГОТОВЫ К ПЕРЕДАЧЕ (' . count($okOrders) . ')';
             $lines[] = str_repeat('-', 78);
-            $lines[] = implode(', ', array_column($okOrders, 'id'));
-            $lines[] = '';
+
+            $plainIds = [];
+            foreach ($okOrders as $order) {
+                $rows = $result->rowsFor($order['key']);
+                $notes = array_values(array_filter(
+                    $rows,
+                    static fn (Row $row): bool => $row->code !== 'OK',
+                ));
+                if ($notes === []) {
+                    $plainIds[] = $order['id'];
+                    continue;
+                }
+
+                $lines[] = self::orderHeader($order);
+                foreach ($notes as $row) {
+                    array_push($lines, ...self::issueLines($row));
+                }
+                $lines[] = '';
+            }
+
+            if ($plainIds !== []) {
+                $lines[] = implode(', ', $plainIds);
+                $lines[] = '';
+            }
         }
 
         return implode(PHP_EOL, $lines);

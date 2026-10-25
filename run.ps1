@@ -118,6 +118,15 @@ New-Item -ItemType Directory -Force -Path (Join-Path $root 'var') | Out-Null
 function Invoke-Task01 {
     Write-Step 'Задание 01: сверка заказов маркетплейса с номенклатурой 1С'
 
+    Write-Host '--- самопроверка bugs/OrderTotal.php'
+    & $php (Join-Path $root '01-orders-1c-sync\bugs\OrderTotal.php')
+    $bugsCode = $LASTEXITCODE
+    if ($bugsCode -ne 0) {
+        Stop-WithError "самопроверка OrderTotal.php завершилась с кодом $bugsCode"
+    }
+
+    Write-Host ''
+    Write-Host '--- сверка заказов'
     $csv = Join-Path $root 'var\01-report.csv'
     $txt = Join-Path $root 'var\01-report.txt'
     $log = Join-Path $root 'var\01-app.log'
